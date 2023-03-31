@@ -1,0 +1,29 @@
+<h2 class="text-center">Lista personajes</h2>
+<br>
+<table class="table table-striped text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Peso</th>
+            <th>Historia</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personaje of personajes">
+            <td>{{personaje.nombre}}</td>
+            <td>{{personaje.edad}}</td>
+            <td>{{personaje.peso}} kg</td>
+            <td>{{personaje.historia}}</td>
+            <td>
+                <button  class="btn btn-warning text-white" style="margin-right: 10px;">Actualizar</button>
+                <button  class="btn btn-danger" style="margin-left: 10px;margin-right: 10px;">Eliminar</button>
+                <button  class="btn btn-primary" style="margin-left: 10px;">Ver detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button  class="btn btn-primary" style="margin-left: 10px;">
+    <a class="text-white text-decoration-none" href="#">Agregar nuevo personaje</a>
+</button>

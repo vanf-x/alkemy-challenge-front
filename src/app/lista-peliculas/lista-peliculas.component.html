@@ -1,0 +1,27 @@
+<h2 class="text-center">Lista películas</h2>
+<br>
+<table class="table table-striped text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Fecha de estreno</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pelicula of peliculas">
+            <td>{{pelicula.titulo}}</td>
+            <td>{{pelicula.genero}}</td>
+            <td>{{pelicula.fechaDeCreacion | date:'dd-MM-yyyy'}}</td>
+            <td>
+                <button  class="btn btn-warning text-white" style="margin-right: 10px;">Actualizar</button>
+                <button  class="btn btn-danger" style="margin-left: 10px;margin-right: 10px;">Eliminar</button>
+                <button  class="btn btn-primary" style="margin-left: 10px;">Ver detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button  class="btn btn-primary" style="margin-left: 10px;">
+    <a class="text-white text-decoration-none" href="#">Agregar nueva película</a>
+</button>
