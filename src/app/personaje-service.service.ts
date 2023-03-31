@@ -12,4 +12,7 @@ private baseURL = "http://localhost:8080/api/v1/personajes";
   obtenerListaDePersonajes(): Observable<PersonajeComponent[]>{
     return this.httpClient.get<PersonajeComponent[]>(`${this.baseURL}`);
   }
+  obtenerPersonajePorId(id:number):Observable<PersonajeComponent>{
+    return this.httpClient.get<PersonajeComponent>(`${this.baseURL}/${id}`);
+  }
 }

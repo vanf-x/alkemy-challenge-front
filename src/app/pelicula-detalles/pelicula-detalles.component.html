@@ -1,0 +1,41 @@
+<h3 class="text-center">Detalles de la película</h3>
+<div
+  class="container border rounded p-2 d-flex flex-column flex-md-row justify-content-sm-around align-items-center"
+>
+  <div>
+    <label><b>ID: </b>{{ pelicula.id }}</label
+        ><br />
+        <label><b>Título: </b>{{ pelicula.titulo }}</label
+        ><br />
+        <label><b>Género: </b>{{ pelicula.genero }}</label
+        ><br />
+        <label
+          ><b>Fecha de estreno: </b
+          >{{ pelicula.fechaDeCreacion | date : "dd-MM-yyyy" }}</label
+        ><br /><br />
+  </div>
+  <div class="mt-3 mt-md-0">
+    <img
+    src="../../assets/img/logo.png"
+    class="rounded mx-auto d-block"
+    alt="imagen-pelicula"
+  />
+  </div>
+</div>
+<br />
+
+<div class="d-flex flex-column flex-md-row justify-content-sm-around">
+  <button class="btn btn-warning">
+    <a class="text-white text-decoration-none" href=""
+      >Editar película</a
+    ></button
+  ><br />
+  <button class="btn btn-success">
+    <a
+      class="text-white text-decoration-none"
+      [routerLink]="['/peliculas']"
+      routerLinkActive="router-link-active"
+      >Volver a películas</a
+    >
+  </button>
+</div>

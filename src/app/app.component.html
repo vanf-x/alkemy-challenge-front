@@ -1,6 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a
+      class="navbar-brand"
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+      >VANF-X</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -42,7 +47,6 @@
           </a>
         </li>
       </ul>
-      
     </div>
   </div>
 </nav>

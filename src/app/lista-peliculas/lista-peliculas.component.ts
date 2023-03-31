@@ -23,4 +23,7 @@ export class ListaPeliculasComponent implements OnInit {
       this.peliculas = data;
     });
   }
+  verDetallesPelicula(id:number){
+    this.router.navigate(['peliculas', id])
+  }
 }

@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { PeliculaComponent } from './pelicula/pelicula.component';
 import { GeneroComponent } from './genero/genero.component';
 import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.component';
+import { PeliculaDetallesComponent } from './pelicula-detalles/pelicula-detalles.component';
+import { PersonajeDetallesComponent } from './personaje-detalles/personaje-detalles.component';
+import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.compo
     HomeComponent,
     PeliculaComponent,
     GeneroComponent,
-    ListaPeliculasComponent
+    ListaPeliculasComponent,
+    PeliculaDetallesComponent,
+    PersonajeDetallesComponent,
+    PaginaErrorComponent
   ],
   imports: [
     BrowserModule,

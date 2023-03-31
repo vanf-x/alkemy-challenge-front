@@ -1,0 +1,37 @@
+<h3 class="text-center">Detalles del personaje</h3>
+<div class="container border rounded p-2 d-flex flex-column flex-md-row justify-content-sm-around align-items-center ">
+  <div>
+    <label><b>ID: </b>{{ personaje.id }}</label
+    ><br />
+    <label><b>Nombre: </b>{{ personaje.nombre }}</label
+    ><br />
+    <label><b>Edad: </b>{{ personaje.edad }} años</label><br />
+    <label><b>Peso: </b>{{ personaje.peso }} kg</label><br />
+    <label><b>Bio: </b>{{ personaje.historia }}</label
+    ><br />
+  </div>
+  <div class="mt-3 mt-md-0">
+    <img
+      src="../../assets/img/logo.png"
+      class="rounded mx-auto d-block"
+      alt="imagen-personaje"
+    />
+  </div>
+</div>
+<br />
+
+<div class="d-flex flex-column flex-md-row justify-content-sm-around">
+  <button class="btn btn-warning">
+    <a class="text-white text-decoration-none" href=""
+      >Editar personaje</a
+    ></button
+  ><br />
+  <button class="btn btn-success">
+    <a
+      class="text-white text-decoration-none"
+      [routerLink]="['/personajes']"
+      routerLinkActive="router-link-active"
+      >Volver a personajes</a
+    >
+  </button>
+</div>
