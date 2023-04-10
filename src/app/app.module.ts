@@ -18,6 +18,8 @@ import { GeneroDetallesComponent } from './genero-detalles/genero-detalles.compo
 import { ListaGenerosComponent } from './lista-generos/lista-generos.component';
 import { CrearPersonajeFormularioComponent } from './crear-personaje-formulario/crear-personaje-formulario.component';
 import { EditarPersonajeFormularioComponent } from './editar-personaje-formulario/editar-personaje-formulario.component';
+import { CrearPeliculaFormularioComponent } from './crear-pelicula-formulario/crear-pelicula-formulario.component';
+import { EditarPeliculaFormularioComponent } from './editar-pelicula-formulario/editar-pelicula-formulario.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { EditarPersonajeFormularioComponent } from './editar-personaje-formulari
     GeneroDetallesComponent,
     ListaGenerosComponent,
     CrearPersonajeFormularioComponent,
-    EditarPersonajeFormularioComponent
+    EditarPersonajeFormularioComponent,
+    CrearPeliculaFormularioComponent,
+    EditarPeliculaFormularioComponent
   ],
   imports: [
     BrowserModule,

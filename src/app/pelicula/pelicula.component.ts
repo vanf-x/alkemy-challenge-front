@@ -10,8 +10,9 @@ export class PeliculaComponent  {
 id: number;
 imagen: string;
 titulo: string;
-genero: string;
+genero: string = "Otro";
 fechaDeCreacion: Date;
+activo: boolean;
 
   constructor() { }
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CrearPeliculaFormularioComponent } from './crear-pelicula-formulario/crear-pelicula-formulario.component';
 import { CrearPersonajeFormularioComponent } from './crear-personaje-formulario/crear-personaje-formulario.component';
 import { EditarPersonajeFormularioComponent } from './editar-personaje-formulario/editar-personaje-formulario.component';
 import { GeneroDetallesComponent } from './genero-detalles/genero-detalles.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'personajes', component: ListaPersonajesComponent },
   { path: 'home', component: HomeComponent },
   { path: 'peliculas', component: ListaPeliculasComponent },
+  { path: 'peliculas/crear', component: CrearPeliculaFormularioComponent },
   { path: 'peliculas/:id', component: PeliculaDetallesComponent },
   { path: 'personajes/crear', component: CrearPersonajeFormularioComponent },
   { path: 'personajes/editar/:id', component: EditarPersonajeFormularioComponent },

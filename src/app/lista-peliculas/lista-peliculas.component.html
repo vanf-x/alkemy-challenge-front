@@ -4,19 +4,13 @@
   <thead class="table-dark">
     <tr>
       <th>Título</th>
-      <th>Acciones</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let pelicula of peliculas">
       <td>{{ pelicula.titulo }}</td>
       <td>
-        <button
-          class="btn btn-danger"
-          style="margin-left: 10px; margin-right: 10px"
-        >
-          Eliminar
-        </button>
         <button
           (click)="verDetallesPelicula(pelicula.id)"
           class="btn btn-primary"
@@ -29,5 +23,7 @@
   </tbody>
 </table>
 <button class="btn btn-success" style="margin-left: 10px">
-  <a class="text-white text-decoration-none" href="#">Agregar nueva película</a>
+  <a class="text-white text-decoration-none" 
+  [routerLink]="['/peliculas/crear']" routerLinkActive="router-link-active" 
+  >Agregar nueva película</a>
 </button>
