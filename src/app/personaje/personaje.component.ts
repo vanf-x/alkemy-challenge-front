@@ -14,5 +14,6 @@ imagen:string;
 edad:number;
 peso:number;
 historia:string;
+activo: boolean;
 
 }

@@ -22,11 +22,19 @@
 
 <div class="d-flex flex-column flex-md-row justify-content-sm-around">
   <button class="btn btn-warning">
-    <a class="text-white text-decoration-none" href=""
+    <a class="text-white text-decoration-none"
+[routerLink]="['/personajes/editar/', personaje.id]" routerLinkActive="router-link-active" 
       >Editar personaje</a
     ></button
   ><br />
-  <button class="btn btn-success">
+  <button class="btn btn-danger" (click)="onClickEliminar()">
+    <a class="text-white text-decoration-none"
+    
+      >Eliminar personaje</a
+    ></button
+  >
+  <br>
+  <button class="btn btn-primary">
     <a
       class="text-white text-decoration-none"
       [routerLink]="['/personajes']"

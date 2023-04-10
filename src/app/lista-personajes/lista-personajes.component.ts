@@ -23,8 +23,10 @@ export class ListaPersonajesComponent implements OnInit {
       //console.log(data);
       this.personajes = data;
     });
-    }
-    verDetallesPersonaje(id:number){
-      this.router.navigate(['personajes', id])
   }
+
+  verDetallesPersonaje(id: number) {
+    this.router.navigate(['personajes', id]);
+  }
+
 }

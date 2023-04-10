@@ -1,0 +1,121 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Argegar nuevo personaje</h3>
+  <form (ngSubmit)="onSubmit()" #personajeForm="ngForm">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)]="personaje.nombre"
+        name="nombre"
+        required
+        minlength="4"
+        maxlength="20"
+        pattern="^[-a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(?:\W+[-a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+){1,5}(?:\W+[-\s[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]]+)?$"
+        placeholder="John Doe"
+        #nombre="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+      >
+        <div *ngIf="nombre.errors?.['required']">
+          Digite el nombre del personaje por favor
+        </div>
+        <div *ngIf="nombre.errors?.['minlength']">
+          El nombre tiene que contener como minimo 4 caracteres
+        </div>
+        <div *ngIf="nombre.errors?.['maxlength']">
+          El nombre tiene que tener como maximo 20 caracteres
+        </div>
+        <div *ngIf="nombre.errors?.['pattern']">
+          Por favor digite el nombre con el siguiente formato: John Doe
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Edad</label>
+      <input
+        type="number"
+        class="form-control"
+        id="edad"
+        [(ngModel)]="personaje.edad"
+        name="edad"
+        required
+        minlength="0"
+        maxlength="99"
+        placeholder="25"
+        #edad="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="edad.invalid && (edad.dirty || edad.touched)"
+      >
+        <div *ngIf="edad.errors?.['required']">
+          Digite la edad del personaje por favor
+        </div>
+        <div *ngIf="edad.errors?.['minlength']">
+          La edad no puede ser un número negativo
+        </div>
+        <div *ngIf="edad.errors?.['maxlength']">
+          La edad máxima aceptada es de 99 años
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Peso</label>
+      <input
+        type="number"
+        class="form-control"
+        id="peso"
+        [(ngModel)]="personaje.peso"
+        name="peso"
+        required
+        minlength="1"
+        maxlength="199"
+        placeholder="70"
+        #peso="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="peso.invalid && (peso.dirty || peso.touched)"
+      >
+        <div *ngIf="peso.errors?.['required']">
+          Digite el peso del personaje por favor
+        </div>
+        <div *ngIf="peso.errors?.['minlength']">
+          La peso no puede ser cero ni un número negativo
+        </div>
+        <div *ngIf="peso.errors?.['maxlength']">
+          El peso máximo aceptado es de 199 kg
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Bio</label>
+      <textarea
+        class="form-control"
+        id="historia"
+        [(ngModel)]="personaje.historia"
+        name="historia"
+        required
+        placeholder="John Doe es un personaje..."
+        #historia="ngModel"
+      ></textarea>
+      <div
+        class="alert alert-danger"
+        *ngIf="historia.invalid && (historia.dirty || historia.touched)"
+      >
+        <div *ngIf="historia.errors?.['required']">
+          Digite el historia del personaje por favor
+        </div>
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-success" [disabled]="!personajeForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>

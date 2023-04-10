@@ -15,4 +15,14 @@ private baseURL = "http://localhost:8080/api/v1/personajes";
   obtenerPersonajePorId(id:number):Observable<PersonajeComponent>{
     return this.httpClient.get<PersonajeComponent>(`${this.baseURL}/${id}`);
   }
+  crearNuevoPersonaje(personaje: PersonajeComponent):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, personaje);
+  }
+  editarPersonaje(id:number, personaje:PersonajeComponent) : Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/${id}`, personaje);
+  }
+  eliminarPersonaje(id: number, personaje: PersonajeComponent): Observable<Object>{
+    const personajeModificado = { ...personaje, activo: false };
+    return this.httpClient.put(`${this.baseURL}/${id}`, personajeModificado);
+  }
 }
