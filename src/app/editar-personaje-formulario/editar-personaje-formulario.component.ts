@@ -24,6 +24,7 @@ export class EditarPersonajeFormularioComponent implements OnInit {
         this.personaje = data;
       },
       (error) => {
+      console.log("Ocurrió un error accediendo al personaje");
         //this.router.navigate(['/**']);
       }
     );

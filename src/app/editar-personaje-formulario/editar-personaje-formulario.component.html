@@ -44,8 +44,8 @@
         [(ngModel)]="personaje.edad"
         name="edad"
         required
-        minlength="0"
-        maxlength="99"
+        min="0"
+        max="99"
         placeholder="25"
         #edad="ngModel"
       />
@@ -56,10 +56,10 @@
         <div *ngIf="edad.errors?.['required']">
           Digite la edad del personaje por favor
         </div>
-        <div *ngIf="edad.errors?.['minlength']">
+        <div *ngIf="edad.errors?.['min']">
           La edad no puede ser un número negativo
         </div>
-        <div *ngIf="edad.errors?.['maxlength']">
+        <div *ngIf="edad.errors?.['max']">
           La edad máxima aceptada es de 99 años
         </div>
       </div>
@@ -73,8 +73,8 @@
         [(ngModel)]="personaje.peso"
         name="peso"
         required
-        minlength="1"
-        maxlength="199"
+        min="1"
+        max="199"
         placeholder="70"
         #peso="ngModel"
       />
@@ -85,10 +85,10 @@
         <div *ngIf="peso.errors?.['required']">
           Digite el peso del personaje por favor
         </div>
-        <div *ngIf="peso.errors?.['minlength']">
+        <div *ngIf="peso.errors?.['min']">
           La peso no puede ser cero ni un número negativo
         </div>
-        <div *ngIf="peso.errors?.['maxlength']">
+        <div *ngIf="peso.errors?.['max']">
           El peso máximo aceptado es de 199 kg
         </div>
       </div>

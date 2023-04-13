@@ -20,6 +20,7 @@ personaje: PersonajeComponent = new PersonajeComponent();
   crearPersonaje(){
     this.pesonajeService.crearNuevoPersonaje(this.personaje).subscribe(data=>{
       console.log(data);
+      alert("Personaje creado con éxito");
       this.irAlListadoDePersonajes();
     })
   }

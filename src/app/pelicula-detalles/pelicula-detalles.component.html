@@ -9,6 +9,12 @@
         ><br />
         <label><b>Género: </b>{{ pelicula.genero }}</label
         ><br />
+        <label><b>Calificación:</b></label>
+        <div class="d-flex">
+          <ng-container *ngFor="let i of counter(pelicula.calificacion)">
+            <img src="../../assets/img/cropped-estrella-calificacion.png" width="30px" alt="estrella">
+          </ng-container>
+        </div>
         <label
           ><b>Fecha de estreno: </b
           >{{ pelicula.fechaDeCreacion | date : "dd-MM-yyyy" }}</label
@@ -26,7 +32,9 @@
 
 <div class="d-flex flex-column flex-md-row justify-content-sm-around">
   <button class="btn btn-warning">
-    <a class="text-white text-decoration-none" href=""
+    <a class="text-white text-decoration-none" 
+    [routerLink]="['/peliculas/editar/', pelicula.id]"
+    routerLinkActive="router-link-active"
       >Editar película</a
     ></button
   ><br />

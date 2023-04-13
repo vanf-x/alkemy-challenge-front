@@ -11,7 +11,10 @@ import { PeliculaComponent } from '../pelicula/pelicula.component';
 export class PeliculaDetallesComponent implements OnInit {
   id: number;
   pelicula: PeliculaComponent;
-
+  
+  counter(i: number) {
+    return new Array(i);
+  }
   constructor(
     private route: ActivatedRoute,
     private peliculaService: PeliculaServiceService

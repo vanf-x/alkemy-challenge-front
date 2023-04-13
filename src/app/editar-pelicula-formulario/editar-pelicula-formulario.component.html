@@ -1,1 +1,120 @@
-<p>editar-pelicula-formulario works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Agregar nueva película</h3>
+    <form (ngSubmit)="onSubmit()" #peliculaForm="ngForm">
+      <div class="form-group">
+        <label>Título</label>
+        <input
+          type="text"
+          class="form-control"
+          id="titulo"
+          [(ngModel)]="pelicula.titulo"
+          name="titulo"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Martes 13"
+          #titulo="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="titulo.invalid && (titulo.dirty || titulo.touched)"
+        >
+          <div *ngIf="titulo.errors?.['required']">
+            Digite el título de la película por favor
+          </div>
+          <div *ngIf="titulo.errors?.['minlength']">
+            El título tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="titulo.errors?.['maxlength']">
+            El título tiene que tener como máximo 20 caracteres
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Fecha de estreno</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fechaDeCreacion"
+          [(ngModel)]="pelicula.fechaDeCreacion"
+          name="fechaDeCreacion"
+          required
+          #fechaDeCreacion="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            fechaDeCreacion.invalid &&
+            (fechaDeCreacion.dirty || fechaDeCreacion.touched)
+          "
+        >
+          <div *ngIf="fechaDeCreacion.errors?.['required']">
+            Digite la fecha de estreno de la película por favor
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Calificación</label>
+        <input
+          type="number"
+          class="form-control"
+          id="calificacion"
+          [(ngModel)]="pelicula.calificacion"
+          name="calificacion"
+          required
+          min="1"
+          max="5"
+          placeholder="5"
+          #calificacion="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="calificacion.invalid && (calificacion.dirty || calificacion.touched)"
+        >
+          <div *ngIf="calificacion.errors?.['required']">
+            Digite la calificación del personaje por favor
+          </div>
+          <div *ngIf="calificacion.errors?.['min']">
+            La calificación no puede ser cero o un número negativo
+          </div>
+          <div *ngIf="calificacion.errors?.['max']">
+            La calificacion máxima aceptada es de 5 estrellas
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="genero">Género</label>
+        <select
+          class="form-select"
+          id="genero"
+          required
+          [(ngModel)]="pelicula.genero"
+          #genero="ngModel"
+          name="genero"
+        >
+          <option value="" disabled>Selecciona una opción</option>
+          <option value="Terror">Terror</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Bizarro">Bizarro</option>
+          <option value="Suspenso">Suspenso</option>
+          <option value="Drama">Drama</option>
+        </select>
+        <div *ngIf="genero.errors?.['required']">
+          Seleccione una opción por favor
+        </div>
+      </div>
+  
+      <br />
+      <div class="d-flex justify-content-between">
+      <button class="btn btn-danger" routerLink="/peliculas">
+        Cancelar
+      </button>
+      <button class="btn btn-success" [disabled]="!peliculaForm.form.valid || pelicula.genero === ''">
+        Guardar
+      </button>
+    </div>
+    </form>
+  </div>

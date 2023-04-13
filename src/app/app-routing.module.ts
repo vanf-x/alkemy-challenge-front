@@ -11,12 +11,14 @@ import { ListaPersonajesComponent } from './lista-personajes/lista-personajes.co
 import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
 import { PeliculaDetallesComponent } from './pelicula-detalles/pelicula-detalles.component';
 import { PersonajeDetallesComponent } from './personaje-detalles/personaje-detalles.component';
+import { EditarPeliculaFormularioComponent } from './editar-pelicula-formulario/editar-pelicula-formulario.component';
 
 const routes: Routes = [
   { path: 'personajes', component: ListaPersonajesComponent },
   { path: 'home', component: HomeComponent },
   { path: 'peliculas', component: ListaPeliculasComponent },
   { path: 'peliculas/crear', component: CrearPeliculaFormularioComponent },
+  { path: 'peliculas/editar/:id', component: EditarPeliculaFormularioComponent },
   { path: 'peliculas/:id', component: PeliculaDetallesComponent },
   { path: 'personajes/crear', component: CrearPersonajeFormularioComponent },
   { path: 'personajes/editar/:id', component: EditarPersonajeFormularioComponent },

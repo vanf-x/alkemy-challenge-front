@@ -16,6 +16,11 @@
         </tr>
     </tbody>
 </table>
-<button  class="btn btn-success" style="margin-left: 10px;">
+<div class="d-flex justify-content-between">
+<button  class="btn btn-danger" routerLink="/home">
+    Volver al menú principal
+</button>
+<button  class="btn btn-success" >
     <a class="text-white text-decoration-none" [routerLink]="['/personajes/crear']" routerLinkActive="router-link-active"  >Agregar nuevo personaje</a>
 </button>
+</div>
