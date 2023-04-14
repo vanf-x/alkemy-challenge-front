@@ -12,7 +12,7 @@ imagen: string;
 titulo: string;
 fechaDeCreacion: Date;
 calificacion: number;
-genero: string = "Otro";
+genero: string;
 activo: boolean;
 
   constructor() { }

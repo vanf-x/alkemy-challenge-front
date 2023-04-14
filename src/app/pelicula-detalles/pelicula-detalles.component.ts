@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PeliculaServiceService } from '../pelicula-service.service';
 import { PeliculaComponent } from '../pelicula/pelicula.component';
 
@@ -17,7 +17,8 @@ export class PeliculaDetallesComponent implements OnInit {
   }
   constructor(
     private route: ActivatedRoute,
-    private peliculaService: PeliculaServiceService
+    private peliculaService: PeliculaServiceService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -27,4 +28,22 @@ export class PeliculaDetallesComponent implements OnInit {
       this.pelicula = data;
     })
   }
+
+  irAlListadoDePeliculas() {
+    this.router.navigate(['/peliculas']);
+    alert('Película eliminada con éxito');
+  }
+
+  onClickEliminar() {
+    this.eliminarPelicula();
+  }
+
+  eliminarPelicula() {
+    this.peliculaService
+      .eliminarPelicula(this.pelicula.id, this.pelicula)
+      .subscribe(() => {
+        this.irAlListadoDePeliculas();
+      });
+  }
+
 }

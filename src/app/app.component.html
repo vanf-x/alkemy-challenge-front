@@ -1,7 +1,7 @@
-<nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+  <div class="container-fluid" >
     <a
-      class="navbar-brand"
+      class="navbar-brand text-white"
       [routerLink]="['/home']"
       routerLinkActive="router-link-active"
       >VANF-X</a
@@ -15,7 +15,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" ></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,7 +23,7 @@
           <a
             [routerLink]="['/home']"
             routerLinkActive="router-link-active"
-            class="nav-link"
+            class="nav-link text-white"
           >
             Home
           </a>
@@ -32,7 +32,7 @@
           <a
             [routerLink]="['/personajes']"
             routerLinkActive="router-link-active"
-            class="nav-link"
+            class="nav-link  text-white"
           >
             Personajes
           </a>
@@ -41,7 +41,7 @@
           <a
             [routerLink]="['/peliculas']"
             routerLinkActive="router-link-active"
-            class="nav-link"
+            class="nav-link text-white"
           >
             Películas
           </a>
@@ -50,7 +50,7 @@
           <a
             [routerLink]="['/generos']"
             routerLinkActive="router-link-active"
-            class="nav-link"
+            class="nav-link text-white"
           >
             Géneros
           </a>
@@ -59,6 +59,7 @@
     </div>
   </div>
 </nav>
+<br>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
