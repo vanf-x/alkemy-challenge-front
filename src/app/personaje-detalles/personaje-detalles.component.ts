@@ -14,7 +14,7 @@ export class PersonajeDetallesComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private personajeService: PersonajeServiceService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -24,6 +24,8 @@ export class PersonajeDetallesComponent implements OnInit {
       this.personaje = data;
     });
   }
+
+
 
   irAlListadoDePersonajes() {
     this.router.navigate(['/personajes']);

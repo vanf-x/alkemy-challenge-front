@@ -15,5 +15,5 @@ edad:number;
 peso:number;
 historia:string;
 activo: boolean;
-
+peliculas:string[] = [];
 }

@@ -114,6 +114,15 @@
       </div>
     </div>
     <br />
+    
+    <div class="form-group">
+      <label>Películas</label>
+      <select name="" id="">
+        <option *ngFor="let pelicula of listaPeliculas">{{pelicula}}</option>
+      </select>
+    </div>
+
+    <br>
     <div class="d-flex justify-content-between">
     <button class="btn btn-danger" routerLink="/personajes">
       Cancelar

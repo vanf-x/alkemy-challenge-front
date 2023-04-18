@@ -14,7 +14,7 @@ fechaDeCreacion: Date;
 calificacion: number;
 genero: string;
 activo: boolean;
-
+personajes:string[] = [];
   constructor() { }
 
 }
