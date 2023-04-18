@@ -9,23 +9,27 @@ import { PeliculaComponent } from '../pelicula/pelicula.component';
   styleUrls: ['./crear-pelicula-formulario.component.css'],
 })
 export class CrearPeliculaFormularioComponent implements OnInit {
-  constructor(private router: Router, private peliculaService: PeliculaServiceService) {}
-pelicula: PeliculaComponent = new PeliculaComponent();
+  constructor(
+    private router: Router,
+    private peliculaService: PeliculaServiceService
+  ) {}
+ 
+  pelicula: PeliculaComponent = new PeliculaComponent();
+ 
   ngOnInit(): void {}
 
-  crearPelicula(){
-    this.peliculaService.crearNuevaPelicula(this.pelicula).subscribe(data=>{
-      console.log(data);
+  crearPelicula() {
+    this.peliculaService.crearNuevaPelicula(this.pelicula).subscribe((data) => {
+      alert('Película creada con éxito');
       this.irAlListadoDePeliculas();
-    })
+    });
   }
 
-  irAlListadoDePeliculas(){
+  irAlListadoDePeliculas() {
     this.router.navigate(['/peliculas']);
   }
 
-  onSubmit(){
+  onSubmit() {
     this.crearPelicula();
   }
-
 }

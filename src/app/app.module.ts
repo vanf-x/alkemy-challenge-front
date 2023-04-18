@@ -20,6 +20,8 @@ import { CrearPersonajeFormularioComponent } from './crear-personaje-formulario/
 import { EditarPersonajeFormularioComponent } from './editar-personaje-formulario/editar-personaje-formulario.component';
 import { CrearPeliculaFormularioComponent } from './crear-pelicula-formulario/crear-pelicula-formulario.component';
 import { EditarPeliculaFormularioComponent } from './editar-pelicula-formulario/editar-pelicula-formulario.component';
+import { CrearGeneroFormularioComponent } from './crear-genero-formulario/crear-genero-formulario.component';
+import { EditarGeneroFormularioComponent } from './editar-genero-formulario/editar-genero-formulario.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { EditarPeliculaFormularioComponent } from './editar-pelicula-formulario/
     CrearPersonajeFormularioComponent,
     EditarPersonajeFormularioComponent,
     CrearPeliculaFormularioComponent,
-    EditarPeliculaFormularioComponent
+    EditarPeliculaFormularioComponent,
+    CrearGeneroFormularioComponent,
+    EditarGeneroFormularioComponent
   ],
   imports: [
     BrowserModule,

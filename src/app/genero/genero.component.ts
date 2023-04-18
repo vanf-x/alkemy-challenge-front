@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./genero.component.css']
 })
 export class GeneroComponent{
+  
 id:number;
 nombre: string;
-imagen: string;
+activo:boolean;
+
   constructor() { }
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneroComponent } from '../genero/genero.component';
+import { GeneroServiceService } from '../genero-service.service';
 
 @Component({
   selector: 'app-genero-detalles',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneroDetallesComponent implements OnInit {
 
-  constructor() { }
+  private id:number;
+  private genero:GeneroComponent;
+
+  constructor(generoService: GeneroServiceService) { }
 
   ngOnInit(): void {
   }
 
+
+  
 }

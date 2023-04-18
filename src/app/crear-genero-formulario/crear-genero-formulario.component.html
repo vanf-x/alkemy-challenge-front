@@ -1,0 +1,45 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Agregar nuevo género</h3>
+    <form (ngSubmit)="onSubmit()" #generoForm="ngForm">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          [(ngModel)]="genero.nombre"
+          name="nombre"
+          required
+          minlength="4"
+          maxlength="20"
+          placeholder="Terror"
+          #nombre="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+        >
+          <div *ngIf="nombre.errors?.['required']">
+            Digite el nombre del género por favor
+          </div>
+          <div *ngIf="nombre.errors?.['minlength']">
+            El nombre tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="nombre.errors?.['maxlength']">
+            El nombre tiene que tener como máximo 20 caracteres
+          </div>
+        </div>
+      </div>
+  
+      <br />
+      <div class="d-flex justify-content-between">
+      <button class="btn btn-danger" routerLink="/generos">
+        Cancelar
+      </button>
+      <button class="btn btn-success" [disabled]="!generoForm.form.valid || genero.nombre === ''">
+        Guardar
+      </button>
+    </div>
+    </form>
+  </div>
+  
