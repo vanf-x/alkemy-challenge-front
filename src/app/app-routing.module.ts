@@ -13,6 +13,7 @@ import { PeliculaDetallesComponent } from './pelicula-detalles/pelicula-detalles
 import { PersonajeDetallesComponent } from './personaje-detalles/personaje-detalles.component';
 import { EditarPeliculaFormularioComponent } from './editar-pelicula-formulario/editar-pelicula-formulario.component';
 import { CrearGeneroFormularioComponent } from './crear-genero-formulario/crear-genero-formulario.component';
+import { EditarGeneroFormularioComponent } from './editar-genero-formulario/editar-genero-formulario.component';
 
 const routes: Routes = [
   { path: 'personajes', component: ListaPersonajesComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'personajes/:id', component: PersonajeDetallesComponent },
   { path: 'generos', component: ListaGenerosComponent },
   { path: 'generos/crear', component: CrearGeneroFormularioComponent },
+  { path: 'generos/editar/:id', component: EditarGeneroFormularioComponent },
   { path: 'generos/:id', component: GeneroDetallesComponent },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
